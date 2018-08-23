@@ -30,9 +30,9 @@
 /* Begin PBXFileReference section */
 		0A6D4257478FF4365068DF4E /* Pods-FALEventHub_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1429FBFAE5980909157A50DF /* Pods-FALEventHub_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2FAAD68328BB3B6A3294C08B /* FALEventHub.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FALEventHub.podspec; path = ../FALEventHub.podspec; sourceTree = "<group>"; };
+		2FAAD68328BB3B6A3294C08B /* FALEventHub.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FALEventHub.podspec; path = ../FALEventHub.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		35527EC415C0994A04D9C722 /* Pods_FALEventHub_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35F7453D09ACE8A6F50FAE21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		35F7453D09ACE8A6F50FAE21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3CE0ACC9496209FBDF9938A5 /* Pods-FALEventHub_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FALEventHub_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FALEventHub_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F5F8BDBC3A85BCC3F4127356 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F5F8BDBC3A85BCC3F4127356 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -1,6 +1,6 @@
 //
 //  FALEventHub.swift
-//  Concentration
+//  FALEventHub
 //
 //  Created by Javier González Ovalle on 08-08-18.
 //  Copyright © 2018 Adessa Falabella. All rights reserved.
@@ -8,34 +8,18 @@
 
 import Foundation
 
-// messages must be created by the subscriber
-struct EventConstants {
-    static let GameCardMatch = "GameCardMatch"
-    static let GamePlayerWon = "GamePlayerWon"
-    static let GamePlayerRestarted = "GamePlayerRestarted"
-    static let GameCardNoMatch = "GameCardNoMatch"
-}
-
-class EventHub: NSObject {
+public class EventHub: NSObject {
 
     // Singleton
     static let sharedManager = EventHub()
-    private override init() {
-        print("ONLY ONE INSTANCE")
-    }
+    private override init() { }
     
-    //evo 2
     public typealias EventDictionary = [String : Any]
-    //evo 1
-    typealias EventFunction = (EventDictionary?) -> Void
-    typealias SubscriberDictionary = [String : [EventFunction]] //|id|array of functions|
+    public typealias EventFunction = (EventDictionary?) -> Void
+    public typealias SubscriberDictionary = [String : [EventFunction]] //|id|array of functions|
+    
     private var serialSubscribers = [String : SubscriberDictionary]() //|message|id|array of functions|
     private var asyncSubscribers = [String : SubscriberDictionary]()
-
-    //evo 3 async
-    
-    // func being listened, maybe storing a block or the function to be executed
-    //completion:() -> Void
 
     // MARK: - utility
     
@@ -73,7 +57,6 @@ class EventHub: NSObject {
     class func registeredEvents() -> Set<String> {
         let regEvents = Set<String>.init(sharedManager.serialSubscribers.keys)
         let asyncEvents = Set<String>.init(sharedManager.asyncSubscribers.keys)
-        
         return regEvents.union(asyncEvents)
     }
     
@@ -86,7 +69,6 @@ class EventHub: NSObject {
         
         var registeredMessages = Set<String>()
         let pSubId = sharedManager.getIdForAnInstance(object: possibleSubscriber)
-        print("looking for events for: \(pSubId)")
         for message in sharedManager.serialSubscribers.keys {
             if let funcIdDict = sharedManager.serialSubscribers[message] {
                 for instanceId in funcIdDict.keys {
@@ -96,7 +78,6 @@ class EventHub: NSObject {
                 }
             }
         }
-        
         if registeredMessages.count > 0 {
             return registeredMessages
         } else {
@@ -110,10 +91,9 @@ class EventHub: NSObject {
      - Parameter eventMessage: the name of the event that triggers the message.
      - Parameter optionalInfo: an optional EventDictionary = [String, Any]     
      */
-    func trigger(eventMessage message :String, optionalInfo messageDict: EventDictionary?) {
-        print("• Triggered: \(message)")
-        
-        if let asyncIds = asyncSubscribers[message] {
+    public class func trigger(eventMessage message :String, optionalInfo messageDict: EventDictionary? = nil) {
+
+        if let asyncIds = sharedManager.asyncSubscribers[message] {
             let backgroundQueue = DispatchQueue.global(qos:.background)
             for functionsForEvent in asyncIds.values {
                 for subscriberFunction in functionsForEvent {
@@ -123,9 +103,7 @@ class EventHub: NSObject {
                 }
             }
         }
-        
-        
-        if let idsFollowing = serialSubscribers[message] {
+        if let idsFollowing = sharedManager.serialSubscribers[message] {
             for functionsForEvent in idsFollowing.values {
                 for subscriberFunction in functionsForEvent {
                     subscriberFunction(messageDict)
@@ -137,13 +115,13 @@ class EventHub: NSObject {
     // MARK: - Subscription, with ID
     
     /**
-     Subscribe an instance for a specific event. It saves the closure function to be called by its trigger
+     Subscribe an instance for a specific event. It saves the closure function to be called by its trigger message.
      - returns: The id in the data structure of this class.
      - Parameter instance: the object which wil be listening to the message
      - Parameter forEvent: the name of the event that triggers the message.
      - Parameter thenCall: the method that will be called when triggered.
      */
-    class func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool = false,thenCall closure : (@escaping EventFunction)) -> String {
+    public class func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool = false,thenCall closure : (@escaping EventFunction)) -> String {
         return sharedManager.subscribe(instance:subscriber, forEvent: message, async: async, thenCall: closure)
     }
     
@@ -179,17 +157,14 @@ class EventHub: NSObject {
 
         var wasRemoved = false
         if serialSubscribers.keys.contains(message) {
-            print("Found serial!: \(message)")
             let unsubbed = remove(event: message, forId: uid, inEventDictionary: serialSubscribers)
             serialSubscribers = unsubbed.updatedEventDictionary
             wasRemoved = unsubbed.itWasRemoved
         } else if asyncSubscribers.keys.contains(message) {
-            print("Found async!: \(message)")
             let unsubbed = remove(event: message, forId: uid, inEventDictionary: asyncSubscribers)
             asyncSubscribers = unsubbed.updatedEventDictionary
             wasRemoved = unsubbed.itWasRemoved
         }
-        print(uid, wasRemoved ? " removed":" not found")
         return wasRemoved
     }
 
@@ -199,7 +174,7 @@ class EventHub: NSObject {
      - Parameter instance: the object that is subscribed.
      - Parameter fromEvent: the name of the event that triggers the message.
      */
-    @discardableResult class func unsubscribe(instance subscriber : NSObject, fromEvent message : String) -> Bool {
+    @discardableResult public class func unsubscribe(instance subscriber : NSObject, fromEvent message : String) -> Bool {
         let uId = sharedManager.getIdForAnInstance(object: subscriber)
         return sharedManager.unsubscribe(fromEvent: message, withId: uId)
     }
@@ -212,7 +187,7 @@ class EventHub: NSObject {
         
         if let idsForTheMessage = newEventDictionary[message] {
             var includingFunctionForIDDictionary = idsForTheMessage
-            // append the new function to the array
+            // possible TODO: append the new function to the array
             //if let functionsForId = idsForTheMessage[sid] { newFunctionsArray = functionsForId + newFunctionsArray }
             includingFunctionForIDDictionary.updateValue(newFunctionsArray, forKey: sid)
             newEventDictionary.updateValue(includingFunctionForIDDictionary, forKey: message)
@@ -225,6 +200,13 @@ class EventHub: NSObject {
         return newEventDictionary
     }
     
+    /**
+     Unsubscribe for a specific message. It removes the function to be called
+     - returns: The modified Dictionary of messages and Ids. True if it was removed, false if not found
+     - Parameter event: the name of the event that triggers the message.
+     - Parameter forId: the ID the object that is subscribed.
+     - Parameter inEventDictionary: the collection of subscribers.
+     */
     func remove(event message : String, forId uid : String,
                 inEventDictionary eventDict : [String : SubscriberDictionary]) -> (updatedEventDictionary : [String : SubscriberDictionary], itWasRemoved : Bool) {
         

@@ -1,0 +1,6 @@
+framework module FALEventHub {
+  umbrella header "FALEventHub-umbrella.h"
+
+  export *
+  module * { export * }
+}

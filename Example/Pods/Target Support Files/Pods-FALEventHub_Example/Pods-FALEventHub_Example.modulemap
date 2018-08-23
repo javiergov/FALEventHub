@@ -1,0 +1,6 @@
+framework module Pods_FALEventHub_Example {
+  umbrella header "Pods-FALEventHub_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

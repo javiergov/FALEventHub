@@ -1,0 +1,16 @@
+PODS:
+  - FALEventHub (0.1.0)
+
+DEPENDENCIES:
+  - FALEventHub (from `../`)
+
+EXTERNAL SOURCES:
+  FALEventHub:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FALEventHub: 9b28cde048e5160988569dffec5a3b0a54166fa1
+
+PODFILE CHECKSUM: 4ea39e97111d46a0c2828bc8e53020ee8fec0ec7
+
+COCOAPODS: 1.5.3

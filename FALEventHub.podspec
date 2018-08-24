@@ -25,7 +25,7 @@ Event manager for decoupling classes made in Swift 4
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Javier González Ovalle' => 'jagonzalezo@falabella.cl' }
-  s.source           = { :git => 'https://javiergov@bitbucket.org/javiergov/podtesting.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://jagonzalezo@bitbucket.adessa.cl/scm/mobile/faleventhub.git', :tag => s.version.to_s }
   s.swift_version    = '4.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

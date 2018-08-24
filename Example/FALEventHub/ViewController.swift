@@ -25,7 +25,7 @@ class ViewController: UIViewController {
                 self.serialFunction(eventInfo)
             }
         case 2:
-            _ = EventHub.subscribe(instance: self, forEvent: Example.message, async: true, thenCall: asyncFunction)
+            EventHub.subscribe(instance: self, forEvent: Example.message, async: true, thenCall: asyncFunction)
             
         case 3:
             EventHub.unsubscribe(instance: self, fromEvent: Example.message)

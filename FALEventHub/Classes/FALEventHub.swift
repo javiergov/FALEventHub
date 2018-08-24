@@ -8,10 +8,10 @@
 
 import Foundation
 
-public class EventHub: NSObject {
+@objc public class EventHub: NSObject {
 
     // Singleton
-    static let sharedManager = EventHub()
+    @objc public static let sharedManager = EventHub()
     private override init() { }
     
     public typealias EventDictionary = [String : Any]
@@ -91,7 +91,7 @@ public class EventHub: NSObject {
      - Parameter eventMessage: the name of the event that triggers the message.
      - Parameter optionalInfo: an optional EventDictionary = [String, Any]     
      */
-    public class func trigger(eventMessage message :String, optionalInfo messageDict: EventDictionary? = nil) {
+    @objc public class func trigger(eventMessage message :String, optionalInfo messageDict: EventDictionary? = nil) {
 
         if let asyncIds = sharedManager.asyncSubscribers[message] {
             let backgroundQueue = DispatchQueue.global(qos:.background)
@@ -121,7 +121,7 @@ public class EventHub: NSObject {
      - Parameter forEvent: the name of the event that triggers the message.
      - Parameter thenCall: the method that will be called when triggered.
      */
-    public class func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool = false,thenCall closure : (@escaping EventFunction)) -> String {
+    @objc @discardableResult public class func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool = false,thenCall closure : (@escaping EventFunction)) -> String {
         return sharedManager.subscribe(instance:subscriber, forEvent: message, async: async, thenCall: closure)
     }
     
@@ -133,10 +133,15 @@ public class EventHub: NSObject {
         } else {
             serialSubscribers = updateSubscriber(event: message, withArrayOfFunctions: newFunctionsArray, pairedWith: sid, inEventDictionary: serialSubscribers)
         }
+        
+        print("ASYNC:")
+        describeEvents(forSubscribers: asyncSubscribers)
+        print("SERIAL:")
+        describeEvents(forSubscribers: serialSubscribers)
     }
 
     private let subsTable = NSMapTable<NSString, NSObject>(keyOptions: .strongMemory, valueOptions: .weakMemory)
-    private func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool, thenCall closure : (@escaping EventFunction)) -> String {
+    @objc private func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool, thenCall closure : (@escaping EventFunction)) -> String {
         
         //let idNumber = NSNumber.init(value: ObjectIdentifier(subscriber).hashValue)
         let newId = getIdForAnInstance(object: subscriber)
@@ -174,7 +179,7 @@ public class EventHub: NSObject {
      - Parameter instance: the object that is subscribed.
      - Parameter fromEvent: the name of the event that triggers the message.
      */
-    @discardableResult public class func unsubscribe(instance subscriber : NSObject, fromEvent message : String) -> Bool {
+    @objc @discardableResult public class func unsubscribe(instance subscriber : NSObject, fromEvent message : String) -> Bool {
         let uId = sharedManager.getIdForAnInstance(object: subscriber)
         return sharedManager.unsubscribe(fromEvent: message, withId: uId)
     }

@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		64AE2114415096842C8029BA /* Pods_FALEventHub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */; };
 		7CF3BF961B083B9809FFAA25 /* Pods_FALEventHub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35527EC415C0994A04D9C722 /* Pods_FALEventHub_Tests.framework */; };
+		B3A02163212F585200CF7583 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A02162212F585200CF7583 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,9 @@
 		607FACE51AFB9204008FA782 /* FALEventHub_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FALEventHub_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		B3A02160212F585200CF7583 /* FALEventHub_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FALEventHub_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3A02161212F585200CF7583 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B3A02162212F585200CF7583 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F5F8BDBC3A85BCC3F4127356 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -99,6 +103,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				B3A02161212F585200CF7583 /* SecondViewController.h */,
+				B3A02162212F585200CF7583 /* SecondViewController.m */,
+				B3A02160212F585200CF7583 /* FALEventHub_Example-Bridging-Header.h */,
 			);
 			name = "Example for FALEventHub";
 			path = FALEventHub;
@@ -212,7 +219,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -322,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A02163212F585200CF7583 /* SecondViewController.m in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -469,11 +477,14 @@
 			baseConfigurationReference = 1429FBFAE5980909157A50DF /* Pods-FALEventHub_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FALEventHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FALEventHub/FALEventHub_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -484,11 +495,13 @@
 			baseConfigurationReference = C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FALEventHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FALEventHub/FALEventHub_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

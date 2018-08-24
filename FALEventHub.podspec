@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FALEventHub'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'Event manager for decoupling classes'
 
 # This description is used to generate tags and improve search results.
@@ -37,7 +37,7 @@ Event manager for decoupling classes made in Swift 4
   #   'FALEventHub' => ['FALEventHub/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'FALEventHub/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

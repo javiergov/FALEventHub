@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import <FALEventHub/FALEventHub-Swift.h>
+#import "FALEventHub-compat.h"
 @import FALEventHub;
 
 @interface SecondViewController ()
@@ -22,8 +22,6 @@ static NSString *const message = @"Event Message";
     [super viewDidLoad];
     
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
-
-    typedef void (^EventHubBlock)(NSDictionary* dict);
 
     EventHubBlock swiftClosure = ^(NSDictionary *messageInfo){
         [self simpleFunction: messageInfo];
@@ -50,15 +48,5 @@ static NSString *const message = @"Event Message";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

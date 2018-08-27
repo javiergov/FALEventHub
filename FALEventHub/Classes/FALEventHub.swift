@@ -30,11 +30,15 @@ import Foundation
         return theId
     }
     
-    class func descriptionOfAllEvents() {
+    /**
+     Prints a description into console of all the subscribers.
+     To be used in debugging.
+     */
+    func descriptionOfAllEvents() {
         print("ASYNC: ")
-        sharedManager.describeEvents(forSubscribers: sharedManager.asyncSubscribers)
+        describeEvents(forSubscribers: asyncSubscribers)
         print("SERIAL: ")
-        sharedManager.describeEvents(forSubscribers: sharedManager.serialSubscribers)
+        describeEvents(forSubscribers: serialSubscribers)
     }
     
     private func describeEvents(forSubscribers eventsDict: [String : SubscriberDictionary]) {
@@ -132,22 +136,13 @@ import Foundation
             asyncSubscribers = updateSubscriber(event: message, withArrayOfFunctions: newFunctionsArray, pairedWith: sid, inEventDictionary: asyncSubscribers)
         } else {
             serialSubscribers = updateSubscriber(event: message, withArrayOfFunctions: newFunctionsArray, pairedWith: sid, inEventDictionary: serialSubscribers)
-        }
-        
-        print("ASYNC:")
-        describeEvents(forSubscribers: asyncSubscribers)
-        print("SERIAL:")
-        describeEvents(forSubscribers: serialSubscribers)
+        }     
     }
 
-    private let subsTable = NSMapTable<NSString, NSObject>(keyOptions: .strongMemory, valueOptions: .weakMemory)
     @objc private func subscribe(instance subscriber : NSObject, forEvent message: String, async : Bool, thenCall closure : (@escaping EventFunction)) -> String {
         
-        //let idNumber = NSNumber.init(value: ObjectIdentifier(subscriber).hashValue)
         let newId = getIdForAnInstance(object: subscriber)
-        subsTable.setObject(subscriber, forKey: newId as NSString)
         subscribe(forEvent: message, withId: newId, async: async, thenCall: closure)
-        //print("newid: \(newId) • \(subsTable)")
         return newId
     }
 

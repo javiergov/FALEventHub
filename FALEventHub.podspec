@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Event manager for decoupling classes made in Swift 4
+'Event manager for decoupling classes made in Swift 4.
+'An instance of a Class subscribes to a specific message and delivers a desired function to be called when an event is triggered.
+'Functions can also be called on a background thread.
                        DESC
 
   s.homepage         = 'https://bitbucket.org/javiergov/podtesting/overview'
@@ -37,7 +39,7 @@ Event manager for decoupling classes made in Swift 4
   #   'FALEventHub' => ['FALEventHub/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'FALEventHub/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

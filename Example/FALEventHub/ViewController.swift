@@ -12,7 +12,7 @@ import FALEventHub
 enum Example {
     static let message = "Event Message"
     static let infoKey = "exampleValue"
-    static let infoValue = 777
+    static let infoValue = 888
 }
 
 class ViewController: UIViewController {
@@ -20,12 +20,12 @@ class ViewController: UIViewController {
     @IBAction func exampleButtonActions(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            _ = EventHub.subscribe(instance: self, forEvent: Example.message, async : false) {(eventInfo : EventHub.EventDictionary?) in
-                print("subscribed to: \(Example.message)")
+            _ = EventHub.subscribe(instance: self, forEvent: Example.message, async : false)
+            { (eventInfo : EventHub.EventDictionary?) in
                 self.serialFunction(eventInfo)
             }
         case 2:
-            _ = EventHub.subscribe(instance: self, forEvent: Example.message, async: true, thenCall: asyncFunction)
+            EventHub.subscribe(instance: self, forEvent: Example.message, async: true, thenCall: asyncFunction)
             
         case 3:
             EventHub.unsubscribe(instance: self, fromEvent: Example.message)
@@ -34,21 +34,21 @@ class ViewController: UIViewController {
         case 5:
             EventHub.trigger(eventMessage: Example.message, optionalInfo: [Example.infoKey : Example.infoValue])
         default:
-            print("button not tagged")
+            print("•FirstVC: button not tagged")
         }
     }
     
     func serialFunction(_ param : Any?) {
-        print("• function called on the same thread")
+        print("•FirstVC: function called on the same thread")
         if let extraInfo = param, extraInfo is EventHub.EventDictionary {
-            print("this event came with extra information: \(extraInfo)")
+            print("•FirstVC: this event came with extra information: \(extraInfo)")
         }
     }
     
     func asyncFunction(_ param : Any?) {
-        print("• function called from a background thread")
+        print("•FirstVC: function called from a background thread")
         if let extraInfo = param, extraInfo is EventHub.EventDictionary {
-            print("this event came with extra information: \(extraInfo)")
+            print("•FirstVC: this event came with extra information: \(extraInfo)")
         }
     }
 }

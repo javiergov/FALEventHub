@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FALEventHub'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Event manager for decoupling classes'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Javier González Ovalle' => 'jagonzalezo@falabella.cl' }
-  s.source           = { :git => 'https://jagonzalezo@bitbucket.adessa.cl/scm/mobile/faleventhub.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://bitbucket.adessa.cl/scm/mobile/faleventhub.git', :tag => s.version.to_s }
   s.swift_version    = '4.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

@@ -1,6 +1,5 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
-#import "FALEventHub-compat.h"
 #else
 #ifndef FOUNDATION_EXPORT
 #if defined(__cplusplus)
@@ -11,6 +10,7 @@
 #endif
 #endif
 
+#import "FALEventHub-compat.h"
 
 FOUNDATION_EXPORT double FALEventHubVersionNumber;
 FOUNDATION_EXPORT const unsigned char FALEventHubVersionString[];

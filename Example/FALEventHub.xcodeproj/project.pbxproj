@@ -274,7 +274,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FALEventHub/FALEventHub.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BEA07BDCEE5D7FB14DD2C64E /* [CP] Check Pods Manifest.lock */ = {

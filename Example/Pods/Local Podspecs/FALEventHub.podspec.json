@@ -1,9 +1,9 @@
 {
   "name": "FALEventHub",
-  "version": "0.1.0",
-  "summary": "A short description of FALEventHub.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Javier González Ovalle/FALEventHub",
+  "version": "0.2.1",
+  "summary": "Event manager for decoupling classes",
+  "description": "'Event manager for decoupling classes made in Swift 4.\n'An instance of a Class subscribes to a specific message and delivers a desired function to be called when an event is triggered.\n'Functions can also be called on a background thread.",
+  "homepage": "https://bitbucket.org/javiergov/podtesting/overview",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,14 @@
     "Javier González Ovalle": "jagonzalezo@falabella.cl"
   },
   "source": {
-    "git": "https://github.com/Javier González Ovalle/FALEventHub.git",
-    "tag": "0.1.0"
+    "git": "https://bitbucket.adessa.cl/scm/mobile/faleventhub.git",
+    "tag": "0.2.1"
   },
+  "swift_versions": "4.0",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "FALEventHub/Classes/**/*"
+  "source_files": "FALEventHub/Classes/**/*",
+  "public_header_files": "FALEventHub/Classes/**/*.h",
+  "swift_version": "4.0"
 }

@@ -13,9 +13,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		64AE2114415096842C8029BA /* Pods_FALEventHub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */; };
-		7CF3BF961B083B9809FFAA25 /* Pods_FALEventHub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35527EC415C0994A04D9C722 /* Pods_FALEventHub_Tests.framework */; };
+		972773494BF4EE95E224AE1E /* Pods_FALEventHub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066E9D1F2A250D86B1965F80 /* Pods_FALEventHub_Tests.framework */; };
 		B3A02163212F585200CF7583 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A02162212F585200CF7583 /* SecondViewController.m */; };
+		E61BF5ECE8FB04A15C6C4E50 /* Pods_FALEventHub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10239158CB4FC5B8D124E95C /* Pods_FALEventHub_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A6D4257478FF4365068DF4E /* Pods-FALEventHub_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1429FBFAE5980909157A50DF /* Pods-FALEventHub_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		066E9D1F2A250D86B1965F80 /* Pods_FALEventHub_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10239158CB4FC5B8D124E95C /* Pods_FALEventHub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CD5377C34654D462C67005 /* Pods-FALEventHub_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.release.xcconfig"; path = "Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2FAAD68328BB3B6A3294C08B /* FALEventHub.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FALEventHub.podspec; path = ../FALEventHub.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		35527EC415C0994A04D9C722 /* Pods_FALEventHub_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F7453D09ACE8A6F50FAE21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3CE0ACC9496209FBDF9938A5 /* Pods-FALEventHub_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D4150F89B5D6459381538FE /* Pods-FALEventHub_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FALEventHub_Tests/Pods-FALEventHub_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		511DDFF82948127842A5CBBB /* Pods-FALEventHub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.release.xcconfig"; path = "Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FALEventHub_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FALEventHub_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +49,7 @@
 		B3A02160212F585200CF7583 /* FALEventHub_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FALEventHub_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		B3A02161212F585200CF7583 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B3A02162212F585200CF7583 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FALEventHub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CC6112F589E5E07E4DA35005 /* Pods-FALEventHub_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FALEventHub_Example.debug.xcconfig"; path = "Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F8BDBC3A85BCC3F4127356 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64AE2114415096842C8029BA /* Pods_FALEventHub_Example.framework in Frameworks */,
+				E61BF5ECE8FB04A15C6C4E50 /* Pods_FALEventHub_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,13 +66,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF3BF961B083B9809FFAA25 /* Pods_FALEventHub_Tests.framework in Frameworks */,
+				972773494BF4EE95E224AE1E /* Pods_FALEventHub_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A54D97DC889E38872AAF9DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC6112F589E5E07E4DA35005 /* Pods-FALEventHub_Example.debug.xcconfig */,
+				511DDFF82948127842A5CBBB /* Pods-FALEventHub_Example.release.xcconfig */,
+				4D4150F89B5D6459381538FE /* Pods-FALEventHub_Tests.debug.xcconfig */,
+				20CD5377C34654D462C67005 /* Pods-FALEventHub_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +92,8 @@
 				607FACD21AFB9204008FA782 /* Example for FALEventHub */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				60C756DB694CFEDAB078AFAD /* Pods */,
-				AAEDB43E516C02D6CD4DF201 /* Frameworks */,
+				3A54D97DC889E38872AAF9DE /* Pods */,
+				9BB19652AE13B5BD63DF3824 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,22 +158,11 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		60C756DB694CFEDAB078AFAD /* Pods */ = {
+		9BB19652AE13B5BD63DF3824 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1429FBFAE5980909157A50DF /* Pods-FALEventHub_Example.debug.xcconfig */,
-				C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */,
-				3CE0ACC9496209FBDF9938A5 /* Pods-FALEventHub_Tests.debug.xcconfig */,
-				0A6D4257478FF4365068DF4E /* Pods-FALEventHub_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AAEDB43E516C02D6CD4DF201 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C54BAD371AAA6EAC8006AA82 /* Pods_FALEventHub_Example.framework */,
-				35527EC415C0994A04D9C722 /* Pods_FALEventHub_Tests.framework */,
+				10239158CB4FC5B8D124E95C /* Pods_FALEventHub_Example.framework */,
+				066E9D1F2A250D86B1965F80 /* Pods_FALEventHub_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,11 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FALEventHub_Example" */;
 			buildPhases = (
-				F4E14F6D32C957564F1B52C9 /* [CP] Check Pods Manifest.lock */,
+				EF76A9195E46C9DA9D0F6716 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				8F4DC931C5D3B32D00AAB8D5 /* [CP] Embed Pods Frameworks */,
+				CE6B3F4A8C37293AB94F77CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FALEventHub_Tests" */;
 			buildPhases = (
-				BEA07BDCEE5D7FB14DD2C64E /* [CP] Check Pods Manifest.lock */,
+				53881BC00A77C89D3B9FF6A9 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -219,11 +220,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1130;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -233,6 +234,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -268,7 +270,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F4DC931C5D3B32D00AAB8D5 /* [CP] Embed Pods Frameworks */ = {
+		53881BC00A77C89D3B9FF6A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FALEventHub_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6B3F4A8C37293AB94F77CF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,34 +310,20 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FALEventHub_Example/Pods-FALEventHub_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BEA07BDCEE5D7FB14DD2C64E /* [CP] Check Pods Manifest.lock */ = {
+		EF76A9195E46C9DA9D0F6716 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FALEventHub_Tests-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4E14F6D32C957564F1B52C9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FALEventHub_Example-checkManifestLockResult.txt",
 			);
@@ -474,7 +484,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1429FBFAE5980909157A50DF /* Pods-FALEventHub_Example.debug.xcconfig */;
+			baseConfigurationReference = CC6112F589E5E07E4DA35005 /* Pods-FALEventHub_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -486,13 +496,13 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "FALEventHub/FALEventHub_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9269706CC55C011D6B292F7 /* Pods-FALEventHub_Example.release.xcconfig */;
+			baseConfigurationReference = 511DDFF82948127842A5CBBB /* Pods-FALEventHub_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -503,13 +513,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FALEventHub/FALEventHub_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CE0ACC9496209FBDF9938A5 /* Pods-FALEventHub_Tests.debug.xcconfig */;
+			baseConfigurationReference = 4D4150F89B5D6459381538FE /* Pods-FALEventHub_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -524,14 +534,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FALEventHub_Example.app/FALEventHub_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A6D4257478FF4365068DF4E /* Pods-FALEventHub_Tests.release.xcconfig */;
+			baseConfigurationReference = 20CD5377C34654D462C67005 /* Pods-FALEventHub_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -542,7 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FALEventHub_Example.app/FALEventHub_Example";
 			};
 			name = Release;

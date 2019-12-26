@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FALEventHub'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'Event manager for decoupling classes'
 
 # This description is used to generate tags and improve search results.
@@ -23,12 +23,12 @@ Pod::Spec.new do |s|
 'Functions can also be called on a background thread.
                        DESC
 
-  s.homepage         = 'https://bitbucket.org/javiergov/podtesting/overview'
+  s.homepage         = 'https://github.com/javiergov/FALEventHub'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Javier González Ovalle' => 'jagonzalezo@falabella.cl' }
-  s.source           = { :git => 'https://bitbucket.adessa.cl/scm/mobile/faleventhub.git', :tag => s.version.to_s }
-  s.swift_version    = '4.0'
+  s.author           = { 'Javier González Ovalle' => 'javiergov+dev@gmail.com' }
+  s.source           = { :git => 'https://github.com/javiergov/FALEventHub.git', :tag => s.version.to_s }
+  s.swift_version    = '5.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

@@ -3,7 +3,7 @@
 //  FALEventHub
 //
 //  Created by Javier González Ovalle on 08/23/2018.
-//  Copyright © 2018 Adessa Falabella. All rights reserved.
+//  Copyright © 2018 Gov Works. All rights reserved.
 //
 
 import UIKit

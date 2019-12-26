@@ -28,7 +28,7 @@ pod 'FALEventHub'
 ```
 
 ## Examples
-### Swift 4
+### Swift 5
 
 Subscribe `self` for an event named `anEvent` in the same thread and call a function `someFunction`: 
 
@@ -90,7 +90,7 @@ Unsubscribe `self` from a message
 
 ## Author
 
-Javier González Ovalle, jagonzalezo@falabella.cl
+Javier González Ovalle, javiergov+dev@gmail.com
 
 ## License
 
